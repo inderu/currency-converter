@@ -4,6 +4,8 @@
     --accent-color: rgb(0, 100, 255);
     --text-on-accent: white;
     --secondary-color: gray;
+    --disabled-color: gray;
+    --error-color: red;
   }
 
   .dark {
@@ -11,6 +13,7 @@
     --text-color: white;
     --accent-color: rgb(0, 100, 255);
     --text-on-accent: white;
+    --disabled-color: gray;
 }
 
   .light {
@@ -18,4 +21,5 @@
     --text-color: black;
     --accent-color: rgb(0, 100, 255);
     --text-on-accent: white;
+    --disabled-color: lightgray;
 }

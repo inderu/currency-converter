@@ -23,7 +23,7 @@
 }
 
 .currency-number[aria-disabled="true"] {
-    border-color: var(--secondary-color);
+    border-color: var(--disabled-color);
 }
 
 .input-wrapper {

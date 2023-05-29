@@ -11,6 +11,7 @@ function App() {
   const [fromCurrency, setFromCurrency] = useState('USD');
   const [toCurrency, setToCurrency] = useState('ILS');
   const [exchangeRate, setExchangeRate] = useState<number>(1);
+  const [error, setError] = useState('');
 
   // this is instead of our API call
   const fetchExchangeRate = () => {
@@ -189,9 +190,14 @@ function App() {
     {name: "Zimbabwean dollar", code: "ZWL"}
   ];
 
+  // simulating using an API call to fetch the exchange rate
   useEffect(() => {
-    const data = fetchExchangeRate;
-    setExchangeRate(data);
+    try {
+      const data = fetchExchangeRate;
+      setExchangeRate(data);
+    } catch (_) {
+      setError('Encountered an issue while fetching the exchange rate. Please change the exchange rate to try again.')
+    }
   }, [fromCurrency, toCurrency]);
 
   const toValue = useMemo(() => {
@@ -217,7 +223,7 @@ function App() {
           currencies={currencies}
           code={toCurrency}
           onCodeChange={setToCurrency}/>
-        <div className='result'>{toValue}</div>
+        <div className={`result ${error ? 'error' : ''}`}>{error ? error : toValue}</div>
       </header>
     </div>
   );
