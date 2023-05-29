@@ -1,0 +1,25 @@
+:root {
+    --background-color: #282c34;
+    --text-color: white;
+    --accent-color: rgb(0, 100, 255);
+    --text-on-accent: white;
+    --secondary-color: gray;
+    --disabled-color: gray;
+    --error-color: red;
+  }
+
+  .dark {
+    --background-color: #282c34;
+    --text-color: white;
+    --accent-color: rgb(0, 100, 255);
+    --text-on-accent: white;
+    --disabled-color: gray;
+}
+
+  .light {
+    --background-color: white;
+    --text-color: black;
+    --accent-color: rgb(0, 100, 255);
+    --text-on-accent: white;
+    --disabled-color: lightgray;
+}
